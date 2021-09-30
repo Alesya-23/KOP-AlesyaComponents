@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "mMEAMT/mq0R57fnokVsEUKzWuIqQ7QEE+mIaxqpc0F0a93O/T2nSWH3Y5pkQa7oiKBtPti6EHTwwCyovPm+nsA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aleca\\source\\repos\\ComponentsAutumn\\UnvisualComponentsAlesa\\UnvisualComponentsAlesa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleca\\.nuget\\packages\\documentformat.openxml\\2.13.1\\documentformat.openxml.2.13.1.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\pdfsharp-migradoc\\1.50.5147\\pdfsharp-migradoc.1.50.5147.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"PDFsharp-MigraDoc 1.50.5147\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "PDFsharp-MigraDoc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

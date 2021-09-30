@@ -1,0 +1,16 @@
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\bin\Debug\ComponentsAutumn.exe.config
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\bin\Debug\ComponentsAutumn.exe
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\bin\Debug\ComponentsAutumn.pdb
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.Properties.Resources.resources
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.csproj.GenerateResource.cache
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.csproj.CoreCompileInputs.cache
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.exe
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.pdb
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\bin\Debug\AutoMapper.dll
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\bin\Debug\AutoMapper.xml
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.csproj.CopyComplete
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.ListBoxControlAlesa.resources
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.FormTest.resources
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.TextBoxControlAlesa.resources
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.DataGridViewControlAlesa.resources
+C:\Users\aleca\source\repos\ComponentsAutumn\ComponentsAutumn\obj\Debug\ComponentsAutumn.csprojAssemblyReference.cache
