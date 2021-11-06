@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UnvisualComponentsAlesa\UnvisualComponentsAlesa.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataGridViewControlAlesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DataGridViewControlAlesa.Designer.cs">
+      <DependentUpon>DataGridViewControlAlesa.cs</DependentUpon>
+    </Compile>
+    <Compile Update="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ListBoxControlAlesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ListBoxControlAlesa.Designer.cs">
+      <DependentUpon>ListBoxControlAlesa.cs</DependentUpon>
+    </Compile>
+    <Compile Update="TextBoxControlAlesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TextBoxControlAlesa.Designer.cs">
+      <DependentUpon>TextBoxControlAlesa.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="DataGridViewControlAlesa.resx">
+      <DependentUpon>DataGridViewControlAlesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListBoxControlAlesa.resx">
+      <DependentUpon>ListBoxControlAlesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TextBoxControlAlesa.resx">
+      <DependentUpon>TextBoxControlAlesa.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

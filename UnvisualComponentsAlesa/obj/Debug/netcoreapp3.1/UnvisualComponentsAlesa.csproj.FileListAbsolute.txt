@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.csprojAssemblyReference.cache
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.AssemblyInfo.cs
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.deps.json
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.dll
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.pdb
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.dll
+C:\Users\user\Desktop\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.pdb
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.deps.json
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.pdb
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.csprojAssemblyReference.cache
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.AssemblyInfoInputs.cache
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.AssemblyInfo.cs
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.csproj.CoreCompileInputs.cache
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\UnvisualComponentsAlesa\obj\Debug\netcoreapp3.1\UnvisualComponentsAlesa.pdb

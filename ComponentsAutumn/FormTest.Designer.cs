@@ -163,6 +163,7 @@ namespace ComponentsAutumn
         private TextBoxControlAlesa textBoxControlAlesa1;
         private System.Windows.Forms.Button buttonAddText;
         private DataGridViewControlAlesa dataGridViewControlAlesa1;
+        private UnvisualComponentsAlesa.WordTableOne wordTableOne;
         private System.Windows.Forms.Button buttonSaveStorage;
         private System.Windows.Forms.Label labelCurrent;
         private System.Windows.Forms.Label labelNumb;

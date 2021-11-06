@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ComponentsAutumn
@@ -62,18 +63,22 @@ namespace ComponentsAutumn
 
         private void buttonSaveStorage_Click(object sender, EventArgs e)
         {
-            using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
-            {
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                //    report.SaveComponentsToWordFile(new ReportBindingModel
-                //    {
-                //        FileName = dialog.FileName
-                //    });
-                    MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
-                   MessageBoxIcon.Information);
-                }
-            }
+            //using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
+            //{
+            //    if (dialog.ShowDialog() == DialogResult.OK)
+            //    {
+            //    //    report.SaveComponentsToWordFile(new ReportBindingModel
+            //    //    {
+            //    //        FileName = dialog.FileName
+            //    //    });
+            //        MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
+            //       MessageBoxIcon.Information);
+            //    }
+            //}
+           List<string[,]> datas = new List<string[,]>();
+          // datas.Add( "Liza", "Vasya");
+          /// var storageComponent = WordTableOne.SaveData("C:\\Users\\user\\Desktop\\OtchetTest.docx", "otchet", datas);
+
         }
     }
 }
