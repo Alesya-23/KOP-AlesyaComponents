@@ -1,6 +1,8 @@
-﻿using System;
+﻿using COP_Forms;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using UnvisualComponentsAlesa;
 using UnvisualComponentsAlesa.HelperModels;
 
 namespace ComponentsAutumn
@@ -38,10 +40,11 @@ namespace ComponentsAutumn
             labelNumb.Text = textBoxControlAlesa1.ValueTextBox.ToString();
         }
 
-        public class MyObject{ 
-        public string name { get; set; }
+        public class MyObject
+        {
+            public string name { get; set; }
 
-        public int count { get; set; }
+            public int count { get; set; }
         }
         private void dataGridViewControlAlesa1_Load(object sender, EventArgs e)
         {
@@ -53,7 +56,7 @@ namespace ComponentsAutumn
             objMy2.name = "Таня";
             ColumnsDataGrid column = new ColumnsDataGrid();
             column.CountColumn = 2;
-            column.NameColumn = new string []{"name", "count"};
+            column.NameColumn = new string[] { "name", "count" };
             column.Width = new int[] { 80, 50 };
             column.Visible = new bool[] { true, true };
             column.PropertiesObject = new string[] { "name", "count" };
@@ -69,13 +72,13 @@ namespace ComponentsAutumn
             {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    fileName = dialog.FileName.ToString(); 
+                    fileName = dialog.FileName.ToString();
                     MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
                    MessageBoxIcon.Information);
                 }
             }
             List<string[,]> datas = new List<string[,]>();
-            string[,] data = new string[,] { {"Anya", "Vasya" }, { "Dasha", "Mark"} };
+            string[,] data = new string[,] { { "Anya", "Vasya" }, { "Dasha", "Mark" } };
             datas.Add(data);
             wordTableOne.SaveData(fileName, "otchet", datas);
 
@@ -105,6 +108,7 @@ namespace ComponentsAutumn
 
         private void SaveDataChangebleWordButton_Click(object sender, EventArgs e)
         {
+            DataClass data = new DataClass();
             string fileName = "";
             using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
             {
@@ -115,23 +119,19 @@ namespace ComponentsAutumn
                    MessageBoxIcon.Information);
                 }
             }
-            List<TestData> data = new List<TestData>();
-            data.Add(new TestData { name = "csscdscd", value = 1 });
-            data.Add(new TestData { name = "aaa", value = 51 });
-            data.Add(new TestData { name = "sdcdscd", value = 11 });
-            data.Add(new TestData { name = "q234", value = 43 });
-            data.Add(new TestData { name = "Ty", value = 32 });
-            List<TableColumnHelper> helpers = new List<TableColumnHelper>();
-            helpers.Add(new TableColumnHelper { Name = "name", PropertyName = "name", Width = 50 });
-            helpers.Add(new TableColumnHelper { Name = "value", PropertyName = "value", Width = 50 });
-            TableRowHelper[] tableRowHelpers = new TableRowHelper[5] {
-            new TableRowHelper {Height = 30 },
-            new TableRowHelper {Height = 30 },
-            new TableRowHelper {Height = 30 },
-            new TableRowHelper {Height = 30 },
-            new TableRowHelper {Height = 30 }  
-        };
-            wordTableTwo.SaveData<TestData>(fileName, "otchet",helpers, tableRowHelpers, data);
+            wordTableTwo.SaveData<TestData>(new ComponentWordTableConfig<TestData>
+            {
+                WordInfo = new WordInfo
+                {
+                    FileName = fileName,
+                    Title = "Тестовая данная"
+                },
+                ColumnsWidth = data.getColumnsWidth(2, 2400),
+                RowsHeight = data.getRowsHeight(5, 1000),
+                Headers = data.GetHeader(2),
+                PropertiesQueue = data.GetHeader(2),
+                ListData = data.GetTests()
+            });
         }
     }
 }

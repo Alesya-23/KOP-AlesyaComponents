@@ -42,168 +42,198 @@ namespace UnvisualComponentsAlesa
             InitializeComponent();
         }
 
-        public void SaveData<T>(string filename, string title, List<TableColumnHelper> columns,
-            TableRowHelper[] rows, List<T> product)
+        /// <summary>
+        /// Метод создания документа. Содержит проверку и создает документ если пришли коректные данные
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="config"></param>
+        public void SaveData<T>(ComponentWordTableConfig<T> config)
         {
-            IsTableEmpty(product);
-            IsColumnEmpty(columns);
-            Table table = CreateTable(columns, rows, product);
-            FileStream fs = new FileStream(filename, FileMode.Create);
-            Document document = new Document();
-            using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(filename, WordprocessingDocumentType.Document))
+            using (WordprocessingDocument wordDocument = WordprocessingDocument
+             .Create(config.WordInfo.FileName, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mainPart = wordDocument.AddMainDocumentPart();
                 mainPart.Document = new Document();
                 Body docBody = mainPart.Document.AppendChild(new Body());
+
                 docBody.AppendChild(CreateParagraph(new WordParagraph
                 {
-                    Texts = new List<(string, WordTextProperties)> { (title, new
-                WordTextProperties {Bold = true, Size = "28", } ) },
+                    Texts = new List<(string, WordTextProperties)> { (config.WordInfo.Title, new
+                        WordTextProperties {Bold = true, Size = "24", } ) },
                     TextProperties = new WordTextProperties
                     {
                         Size = "24",
                         JustificationValues = JustificationValues.Center
                     }
                 }));
-                document.AddChild(new Paragraph(filename));
-                document.AddChild(table);
+                CheckDataAndProperties(config);
+                Table table = CreateWordTable(config);
+                // Добавляем таблицу в документ
+                docBody.AppendChild(table);
                 wordDocument.MainDocumentPart.Document.Save();
-                fs.Close();
             }
         }
 
-        private Table CreateTable<T>(List<TableColumnHelper> columns,
-            TableRowHelper[] rows, List<T> product)
+        /// <summary>
+        /// Метод создания таблицы. Принимает на вход ComponentWordTableConfig со всеми необходимыма параметрами, исходя
+        /// из которых настраивает и создает таблицу.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="config"></param>
+
+        private static Table CreateWordTable<T>(ComponentWordTableConfig<T> config)
         {
-            Table table = new Table();  
-            //Здесь получаем массив ширины колонок для таблицы и проверяем заполненность ширины 
-            float[] widths = new float[columns.Count];
-            bool widthsExist = true;
-            foreach (TableColumnHelper column in columns)
-            {
-                if (column.Width == null)
-                {
-                    widthsExist = false;
-                }
-            }
-            if (widthsExist)
-            {
-                int index = 0;
-                int sum = 0;
-                foreach (TableColumnHelper column in columns)
-                {
-                    widths[index] = (float)column.Width;
-                    sum += (int)column.Width;
-                    index++;
-                }
-            }
+            Table table = new Table();
 
-            //Здесь мы проверяем наличие данных о высоте колонок
-            bool heightsExist;
-            heightsExist = rows.Length == 2 ? true : false;
-            foreach (TableRowHelper row in rows)
-            {
-                if (row.Height == null)
-                {
-                    heightsExist = false;
-                }
-            }
-
-            //Если есть ширина, то добавляем параметры
-            if (widthsExist)
-            {
-             //   table.
-            }
-            TableProperties props = new TableProperties(
-                       new TableBorders(
-                       new TopBorder
-                       {
-                           Val = new EnumValue<BorderValues>(BorderValues.Single),
-                           Size = 6
-                       },
-                       new BottomBorder
-                       {
-                           Val = new EnumValue<BorderValues>(BorderValues.Single),
-                           Size = 6
-                       },
-                       new LeftBorder
-                       {
-                           Val = new EnumValue<BorderValues>(BorderValues.Single),
-                           Size = 6
-                       },
-                       new RightBorder
-                       {
-                           Val = new EnumValue<BorderValues>(BorderValues.Single),
-                           Size = 6
-                       },
-                       new InsideHorizontalBorder
-                       {
-                           Val = new EnumValue<BorderValues>(BorderValues.Single),
-                           Size = 6
-                       },
-                       new InsideVerticalBorder
-                       {
-                           Val = new EnumValue<BorderValues>(BorderValues.Single),
-                           Size = 6
-                       }));
-
-            table.AppendChild<TableProperties>(props);
-
-            // TableProperties
-
-            //Добавляем столбцы по данным
-            foreach (TableColumnHelper column in columns)
-            {
-                TableCell cell = new TableCell();
-                if (heightsExist)
-                {
-                   // cell.Append(new TableCellProperties(
-              //  new TableCellWidth() { Type = TableWidthUnitValues.Dxa, Width = rows[1]. }));
-                }
-                table.AddChild(cell);
-            }
-
-           // Добавляем ячейки по данным
-            foreach (T produc in product)
-            {
-                foreach (TableColumnHelper column in columns)
-                {
-                    TableRow row = new TableRow();
-                    TableRowHeight trh = row.OfType<TableRowHeight>().FirstOrDefault();
-                    trh.Val = 100;
-                    row.Append(trh);
-                    PropertyInfo propertyInfo = produc.GetType().GetProperty(column.PropertyName);
-                    string value = propertyInfo.GetValue(produc).ToString();
-                    TableCell cell = new TableCell();
-                    cell.Append(new Paragraph(new Run(new Text(value))));
-                    if (heightsExist)
+            TableProperties tblProp = new TableProperties(
+                new TableBorders(
+                    new TopBorder
                     {
-                        //cell.Append(new TableCellProperties(
-                 //   new TableCellWidth() { Type = TableWidthUnitValues.Dxa, Width = columns[1].Width }));
-                       // cell.MinimumHeight = (float)rows[1].Height;
+                        Val = new EnumValue<BorderValues>(BorderValues.Single),
+                        Size = 14
+                    },
+                    new BottomBorder
+                    {
+                        Val = new EnumValue<BorderValues>(BorderValues.Single),
+                        Size = 14
+                    },
+                    new LeftBorder
+                    {
+                        Val = new EnumValue<BorderValues>(BorderValues.Single),
+                        Size = 14
+                    },
+                    new RightBorder
+                    {
+                        Val = new EnumValue<BorderValues>(BorderValues.Single),
+                        Size = 14
+                    },
+                    new InsideHorizontalBorder
+                    {
+                        Val = new EnumValue<BorderValues>(BorderValues.Single),
+                        Size = 10
+                    },
+                    new InsideVerticalBorder
+                    {
+                        Val = new EnumValue<BorderValues>(BorderValues.Single),
+                        Size = 12
                     }
-                    table.AddChild(cell);
+                )
+            );
+
+            table.AppendChild(tblProp);
+
+            // Создаём строку-шапку
+
+            TableRow tableRowHeader = new TableRow();
+            tableRowHeader.Append(
+                new TableRowProperties(
+                    new TableRowHeight() { Val = Convert.ToUInt32(config.RowsHeight[0]) }
+                )
+            );
+
+            for (int i = 0; i < config.Headers.Count; i++)
+            {
+                TableCell cellHeader = new TableCell();
+                cellHeader.Append(new TableCellProperties(
+                    new TableCellWidth() { Type = TableWidthUnitValues.Dxa, Width = config.ColumnsWidth[i].ToString() },
+                    new Bold())
+                );
+                cellHeader.Append(CreateParagraph(new WordParagraph
+                {
+                    Texts = new List<(string, WordTextProperties)> { (config.Headers[i], new
+                        WordTextProperties {Bold = true, Size = "24", } ) },
+                    TextProperties = new WordTextProperties
+                    {
+                        Size = "24",
+                        JustificationValues = JustificationValues.Center
+                    }
+                }));
+                tableRowHeader.Append(cellHeader);
+            }
+            table.Append(tableRowHeader);
+
+            // Получаем поля
+            var property = new List<PropertyInfo>();
+            var type = typeof(T);
+            for (int i = 0; i < config.PropertiesQueue.Count; i++)
+            {
+                var propInfo = type.GetProperty(config.PropertiesQueue[i]);
+                if (propInfo == null)
+                {
+                    throw new Exception("Not found property" + config.PropertiesQueue[i]);
                 }
+                property.Add(propInfo);
             }
 
-            //foreach (var row in table)
-            //{
-               
-            //}
-
+            //бегаем по нашим данным, одна итерация = одна строка данных
+            for (int i = 0; i < config.ListData.Count; i++)
+            {
+                TableRow tableRow = new TableRow();
+                tableRow.Append(new TableRowProperties(
+                new TableRowHeight() { Val = Convert.ToUInt32(config.RowsHeight[i]) })
+                );
+                var Headertext = property[0].GetValue(config.ListData[i]);
+                TableCell HeadertableCell = new TableCell();
+                HeadertableCell.Append(new TableCellProperties(
+                    new TableCellWidth() { Type = TableWidthUnitValues.Dxa, Width = config.ColumnsWidth[0].ToString() }));
+                HeadertableCell.Append(CreateParagraph(new WordParagraph
+                {
+                    Texts = new List<(string, WordTextProperties)> { (Headertext.ToString(), new
+                        WordTextProperties {Bold = true, Size = "24", } ) },
+                    TextProperties = new WordTextProperties
+                    {
+                        Size = "24",
+                        JustificationValues = JustificationValues.Center
+                    }
+                }));
+                tableRow.Append(HeadertableCell);
+                //бегаем по полям наших данных, одна итерация = одна запись в строке
+                for (int j = 1; j < property.Count; j++)
+                {
+                    var text = property[j].GetValue(config.ListData[i]);
+                    TableCell tableCell = new TableCell();
+                    tableCell.Append(new TableCellProperties(
+                        new TableCellWidth() { Type = TableWidthUnitValues.Dxa, Width = config.ColumnsWidth[j].ToString() }));
+                    tableCell.Append(new Paragraph(new Run(new Text(text.ToString()))));
+                    tableRow.Append(tableCell);
+                }
+                table.Append(tableRow);
+            }
             return table;
         }
 
-
-        private static SectionProperties CreateSectionProperties()
+        public void CheckDataAndProperties<T>(ComponentWordTableConfig<T> config)
         {
-            SectionProperties properties = new SectionProperties();
-            PageSize pageSize = new PageSize
+            if (string.IsNullOrEmpty(config.WordInfo.FileName) || string.IsNullOrEmpty(config.WordInfo.Title))
             {
-                Orient = PageOrientationValues.Portrait
-            };
-            properties.AppendChild(pageSize);
-            return properties;
+                throw new Exception("Empty path or title");
+            }
+            if (config.Headers == null || config.Headers.Count == 0)
+            {
+                throw new Exception("Not found table header");
+            }
+            if (config.PropertiesQueue == null || config.PropertiesQueue.Count == 0)
+            {
+                throw new Exception("Not found property queue");
+            }
+            if (config.ColumnsWidth == null || config.ColumnsWidth.Count == 0)
+            {
+                throw new Exception("Not found columns width");
+            }
+            if (config.RowsHeight == null || config.RowsHeight.Count == 0)
+            {
+                throw new Exception("Not found rows height");
+            }
+            if (config.ListData == null || config.ListData.Count == 0)
+            {
+                throw new Exception("Not found list data");
+            }
+            if (config.PropertiesQueue.Count != config.ColumnsWidth.Count ||
+                config.ColumnsWidth.Count != config.Headers.Count ||
+                config.RowsHeight.Count != config.ListData.Count)
+            {
+                throw new Exception("Invalid all property! Data inconsistent");
+            }
         }
         /// <summary>
         /// Создание абзаца с текстом
@@ -274,23 +304,6 @@ namespace UnvisualComponentsAlesa
                 return properties;
             }
             return null;
-        }
-
-        private bool IsTableEmpty<T>(List<T> product)
-        {
-            if (product.Count == 0) throw new Exception("list is empty");
-            return false;
-        }
-        private bool IsColumnEmpty(List<TableColumnHelper> columnHelpers)
-        {
-            foreach (TableColumnHelper column in columnHelpers)
-            {
-                if (column.Name == null || column.PropertyName == null)
-                {
-                    throw new Exception("fullfill the columnHelpers");
-                }
-            }
-            return false;
         }
     }
 }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnvisualComponentsAlesa
+namespace UnvisualComponentsAlesa.HelperModels
 {
     public class WordTextProperties
     {

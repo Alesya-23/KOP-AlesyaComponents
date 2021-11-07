@@ -10,7 +10,7 @@ using Xceed.Words.NET;
 namespace UnvisualComponentsAlesa
 {
     //Диаграмма в Excel. Тип диаграммы – гистограмма. Данные передаются через публичный метод. Отдельно задаются подписи к графику.
-   public class GistagramWord : Component
+    public class GistagramWord : Component
     {
 
         /*
@@ -31,7 +31,7 @@ namespace UnvisualComponentsAlesa
         {
             if (string.IsNullOrEmpty(filename) || string.IsNullOrEmpty(title) || string.IsNullOrEmpty(nameGistogram) || list.Count == 0)
             {
-                throw new Exception("Поля не заполнены");
+                throw new Exception("Fields is empty!");
             }
             CreateDoc(filename, title, nameGistogram, legend, list);
 
@@ -61,7 +61,7 @@ namespace UnvisualComponentsAlesa
                 document.InsertChart(gistogramChart);
                 document.Save();
             }
-            
+
             catch (Exception ex)
             {
                 throw ex;
