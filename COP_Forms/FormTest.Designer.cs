@@ -39,9 +39,11 @@ namespace ComponentsAutumn
             this.textBoxControlAlesa1 = new ComponentsAutumn.TextBoxControlAlesa();
             this.listBoxControlAlesa1 = new ComponentsAutumn.ListBoxControlAlesa();
             this.labelNumb = new System.Windows.Forms.Label();
-            this.wordTableOne = new UnvisualComponentsAlesa.WordTableOne(); 
-            this.gistagramWord = new UnvisualComponentsAlesa.GistagramWord(); 
+            this.wordTableOne = new UnvisualComponentsAlesa.WordTableOne();
+            this.wordTableTwo = new UnvisualComponentsAlesa.WordTableTwo();
+            this.gistagramWord = new UnvisualComponentsAlesa.GistagramWord();
             this.buttonGistogram = new System.Windows.Forms.Button();
+            this.SaveDataChangebleWordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -154,11 +156,23 @@ namespace ComponentsAutumn
             this.buttonGistogram.UseVisualStyleBackColor = true;
             this.buttonGistogram.Click += new System.EventHandler(this.buttonGistogram_Click);
             // 
+            // SaveDataChangebleWordButton
+            // 
+            this.SaveDataChangebleWordButton.Location = new System.Drawing.Point(178, 421);
+            this.SaveDataChangebleWordButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveDataChangebleWordButton.Name = "SaveDataChangebleWordButton";
+            this.SaveDataChangebleWordButton.Size = new System.Drawing.Size(279, 80);
+            this.SaveDataChangebleWordButton.TabIndex = 11;
+            this.SaveDataChangebleWordButton.Text = "Сохранить в настраимой таблице";
+            this.SaveDataChangebleWordButton.UseVisualStyleBackColor = true;
+            this.SaveDataChangebleWordButton.Click += new System.EventHandler(this.SaveDataChangebleWordButton_Click);
+            // 
             // FormTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 562);
+            this.Controls.Add(this.SaveDataChangebleWordButton);
             this.Controls.Add(this.buttonGistogram);
             this.Controls.Add(this.labelNumb);
             this.Controls.Add(this.labelCurrent);
@@ -188,10 +202,12 @@ namespace ComponentsAutumn
         private System.Windows.Forms.Button buttonAddText;
         private DataGridViewControlAlesa dataGridViewControlAlesa1;
         private UnvisualComponentsAlesa.WordTableOne wordTableOne;
+        private UnvisualComponentsAlesa.WordTableTwo wordTableTwo;
         private UnvisualComponentsAlesa.GistagramWord gistagramWord;
         private System.Windows.Forms.Button buttonSaveStorage;
         private System.Windows.Forms.Label labelCurrent;
         private System.Windows.Forms.Label labelNumb;
         private System.Windows.Forms.Button buttonGistogram;
+        private System.Windows.Forms.Button SaveDataChangebleWordButton;
     }
 }

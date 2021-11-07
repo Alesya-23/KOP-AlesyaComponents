@@ -102,5 +102,36 @@ namespace ComponentsAutumn
             LocationLegend legend = new LocationLegend();
             gistagramWord.ReportSaveGistogram(fileName, "gistagram", "gistagram", legend, data);
         }
+
+        private void SaveDataChangebleWordButton_Click(object sender, EventArgs e)
+        {
+            string fileName = "";
+            using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
+            {
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = dialog.FileName.ToString();
+                    MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
+                   MessageBoxIcon.Information);
+                }
+            }
+            List<TestData> data = new List<TestData>();
+            data.Add(new TestData { name = "csscdscd", value = 1 });
+            data.Add(new TestData { name = "aaa", value = 51 });
+            data.Add(new TestData { name = "sdcdscd", value = 11 });
+            data.Add(new TestData { name = "q234", value = 43 });
+            data.Add(new TestData { name = "Ty", value = 32 });
+            List<TableColumnHelper> helpers = new List<TableColumnHelper>();
+            helpers.Add(new TableColumnHelper { Name = "name", PropertyName = "name", Width = 50 });
+            helpers.Add(new TableColumnHelper { Name = "value", PropertyName = "value", Width = 50 });
+            TableRowHelper[] tableRowHelpers = new TableRowHelper[5] {
+            new TableRowHelper {Height = 30 },
+            new TableRowHelper {Height = 30 },
+            new TableRowHelper {Height = 30 },
+            new TableRowHelper {Height = 30 },
+            new TableRowHelper {Height = 30 }  
+        };
+            wordTableTwo.SaveData<TestData>(fileName, "otchet",helpers, tableRowHelpers, data);
+        }
     }
 }

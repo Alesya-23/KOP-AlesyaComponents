@@ -154,7 +154,7 @@ namespace UnvisualComponentsAlesa
             //Добавляем столбцы по данным
             foreach (TableColumnHelper column in columns)
             {
-                TableCell cell = new TableCell(column.Name);
+                TableCell cell = new TableCell();
                 if (heightsExist)
                 {
                    // cell.Append(new TableCellProperties(
