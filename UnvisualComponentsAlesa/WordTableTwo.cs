@@ -165,7 +165,7 @@ namespace UnvisualComponentsAlesa
                 property.Add(propInfo);
             }
 
-            //бегаем по нашим данным, одна итерация = одна строка данных
+            //построчное заполнение данными - заголовки
             for (int i = 0; i < config.ListData.Count; i++)
             {
                 TableRow tableRow = new TableRow();
@@ -187,7 +187,7 @@ namespace UnvisualComponentsAlesa
                     }
                 }));
                 tableRow.Append(HeadertableCell);
-                //бегаем по полям наших данных, одна итерация = одна запись в строке
+                //заполняем столбики данных ( по столбцу)
                 for (int j = 1; j < property.Count; j++)
                 {
                     var text = property[j].GetValue(config.ListData[i]);

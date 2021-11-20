@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\aleca\.nuget\packages\fsharp.core\6.0.1\contentFiles\any\netstandard2.1\FSharp.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="PDFsharp-MigraDoc" Version="1.50.5147" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\COP_Forms\COP_Forms.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MyComponents\DataGridViewControlAlesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MyComponents\DataGridViewControlAlesa.Designer.cs">
+      <DependentUpon>DataGridViewControlAlesa.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MyComponents\ListBoxControlAlesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MyComponents\ListBoxControlAlesa.Designer.cs">
+      <DependentUpon>ListBoxControlAlesa.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MyComponents\TextBoxControlAlesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MyComponents\TextBoxControlAlesa.Designer.cs">
+      <DependentUpon>TextBoxControlAlesa.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

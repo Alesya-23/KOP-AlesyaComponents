@@ -29,6 +29,7 @@ namespace ComponentsAutumn
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.textBoxInputItems = new System.Windows.Forms.TextBox();
@@ -40,7 +41,7 @@ namespace ComponentsAutumn
             this.listBoxControlAlesa1 = new ComponentsAutumn.ListBoxControlAlesa();
             this.labelNumb = new System.Windows.Forms.Label();
             this.wordTableOne = new UnvisualComponentsAlesa.WordTableOne();
-            this.wordTableTwo = new UnvisualComponentsAlesa.WordTableTwo();
+            this.wordTableTwo = new UnvisualComponentsAlesa.WordTableTwo(this.components);
             this.gistagramWord = new UnvisualComponentsAlesa.GistagramWord();
             this.buttonGistogram = new System.Windows.Forms.Button();
             this.SaveDataChangebleWordButton = new System.Windows.Forms.Button();
@@ -187,6 +188,7 @@ namespace ComponentsAutumn
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormTest";
             this.Text = "FormTest";
+            this.Load += new System.EventHandler(this.FormTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\FormMainProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormUnitOfMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NikolaevComponents\UserControlListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OmotovComponents\CheckedListBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OmotovComponents\PDFCircleDiagramComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="OmotovComponents\PDFImageComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="OmotovComponents\PDFTableComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="OmotovComponents\RangeTextBoxUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OmotovComponents\TreeViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Forms\FormProduct.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

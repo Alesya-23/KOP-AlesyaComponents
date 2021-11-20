@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnvisualComponentsAlesa", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COP_Forms", "COP_Forms\COP_Forms.csproj", "{942BC4A4-E3FF-4AD6-9F58-FC8063744315}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingOfProductsInTheStoreView", "AccountingOfProductsInTheStoreView\AccountingOfProductsInTheStoreView.csproj", "{32E93DD6-F4D4-4ABB-8FBA-6A7F3D24BC46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E93DD6-F4D4-4ABB-8FBA-6A7F3D24BC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E93DD6-F4D4-4ABB-8FBA-6A7F3D24BC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E93DD6-F4D4-4ABB-8FBA-6A7F3D24BC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E93DD6-F4D4-4ABB-8FBA-6A7F3D24BC46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

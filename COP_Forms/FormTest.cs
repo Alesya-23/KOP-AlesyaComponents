@@ -133,5 +133,10 @@ namespace ComponentsAutumn
                 ListData = data.GetTests()
             });
         }
+
+        private void FormTest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
