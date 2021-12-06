@@ -18,11 +18,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1000" />
     <PackageReference Include="PDFsharp-MigraDoc" Version="1.50.5147" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\COP_Forms\COP_Forms.csproj" />
   </ItemGroup>
 
   <ItemGroup>

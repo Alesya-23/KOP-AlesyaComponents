@@ -39,13 +39,14 @@ namespace AccountingOfProductsInTheStoreView.Forms
             this.справочникВеличинToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pdfTableComponent = new MyComponentsLibrary.PDFTableComponent(this.components);
             this.wordTableOne = new UnvisualComponentsAlesa.WordTableOne();
+            this.excelChart = new ExcelComponents.ExcelChart(this.components);
             this.userControlListBox1 = new COP_labs.UserControlListBox();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip
             // 
-            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.студентыToolStripMenuItem,
             this.справочникВеличинToolStripMenuItem});
@@ -94,16 +95,16 @@ namespace AccountingOfProductsInTheStoreView.Forms
             // userControlListBox1
             // 
             this.userControlListBox1.GetIndex = -1;
-            this.userControlListBox1.Location = new System.Drawing.Point(2, 3);
+            this.userControlListBox1.Location = new System.Drawing.Point(0, 64);
             this.userControlListBox1.Name = "userControlListBox1";
-            this.userControlListBox1.Size = new System.Drawing.Size(684, 500);
+            this.userControlListBox1.Size = new System.Drawing.Size(1237, 368);
             this.userControlListBox1.TabIndex = 1;
             // 
             // FormMainProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 444);
+            this.ClientSize = new System.Drawing.Size(1237, 444);
             this.Controls.Add(this.userControlListBox1);
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -124,6 +125,7 @@ namespace AccountingOfProductsInTheStoreView.Forms
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
         private MyComponentsLibrary.PDFTableComponent pdfTableComponent;
+        private ExcelComponents.ExcelChart excelChart;
         private UnvisualComponentsAlesa.WordTableOne wordTableOne;
         private COP_labs.UserControlListBox userControlListBox1;
     }

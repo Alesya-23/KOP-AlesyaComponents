@@ -93,3 +93,4 @@ C:\Users\aleca\source\repos\KOP\ComponentsAutumn\AccountingOfProductsInTheStoreV
 C:\Users\aleca\source\repos\KOP\ComponentsAutumn\AccountingOfProductsInTheStoreView\bin\Debug\netcoreapp3.1\COP_Forms.pdb
 C:\Users\aleca\source\repos\KOP\ComponentsAutumn\AccountingOfProductsInTheStoreView\bin\Debug\netcoreapp3.1\UnvisualComponentsAlesa.pdb
 C:\Users\aleca\source\repos\KOP\ComponentsAutumn\AccountingOfProductsInTheStoreView\obj\Debug\netcoreapp3.1\AccountingOfProductsInTheStoreView.Forms.FormMainProduct.resources
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\AccountingOfProductsInTheStoreView\bin\Debug\netcoreapp3.1\Microsoft.Office.Interop.Excel.dll

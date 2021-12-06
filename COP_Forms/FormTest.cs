@@ -138,5 +138,10 @@ namespace ComponentsAutumn
         {
 
         }
+
+        private void listBoxControlAlesa1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

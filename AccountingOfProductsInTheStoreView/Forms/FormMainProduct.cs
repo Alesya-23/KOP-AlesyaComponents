@@ -18,23 +18,22 @@ namespace AccountingOfProductsInTheStoreView.Forms
         public FormMainProduct()
         {
             InitializeComponent();
-            LoadData();
         }
 
         private void LoadData()
         {
-            userControlListBox1.AddTemplate("Страна {Id}, Идентификатор {name}, Название продукта {Country}," +
-                " Единица измерения {UnitOfMeasurement}", '{', '}');
+            userControlListBox1.AddTemplate("Страна {Country}, Идентификатор {Id}, Название продукта {name}," +
+            " Единица измерения {UnitOfMeasurement}", '{', '}');
             try
             {
                 List<ProductViewModel> list = productLogic.Read(null);
-
+                userControlListBox1.ClearListBox();
                 foreach (ProductViewModel product in list)
                 {
-                    userControlListBox1.AddObjectToListBox<ProductViewModel>(new ProductViewModel
+                    userControlListBox1.AddObjectToListBox<ProductViewModelListBoxData>(new ProductViewModelListBoxData
                     {
 
-                        Id = product.Id,
+                        Id = (int)product.Id,
                         name = product.name,
                         Country = product.Country,
                         UnitOfMeasurement = product.UnitOfMeasurement,
@@ -73,7 +72,7 @@ namespace AccountingOfProductsInTheStoreView.Forms
             {
                 try
                 {
-                    ProductViewModel product = userControlListBox1.GetItem<ProductViewModel>();
+                    ProductViewModelListBoxData product = userControlListBox1.GetItem<ProductViewModelListBoxData>();
                     productLogic.Delete(new ProductBindingModel { Id = product.Id });
                     LoadData();
                 }
@@ -89,7 +88,7 @@ namespace AccountingOfProductsInTheStoreView.Forms
         {
             try
             {
-                ProductViewModel product = userControlListBox1.GetItem<ProductViewModel>();
+                ProductViewModelListBoxData product = userControlListBox1.GetItem<ProductViewModelListBoxData>();
                 FormProduct form = new FormProduct();
                 form.Id = (int)product.Id;
                 form.ShowDialog();
@@ -137,15 +136,15 @@ namespace AccountingOfProductsInTheStoreView.Forms
                     //доделать!!!
                     List<string[,]> datas = new List<string[,]>();
                     int count = list.Count;
-                    string[,] data = new string[count,3];
+                    string[,] data = new string[count, 3];
                     int i = 0;
                     foreach (var listItem in list)
                     {
                         data[i, 0] = listItem.SupplierOne;
                         data[i, 1] = listItem.SupplierTwo;
                         data[i, 2] = listItem.SupplierThree;
-                        if (i<count)
-                        i++;
+                        if (i < count)
+                            i++;
                     }
                     datas.Add(data);
                     wordTableOne.SaveData(fileName, "otchet", datas);
@@ -171,10 +170,22 @@ namespace AccountingOfProductsInTheStoreView.Forms
                            MessageBoxIcon.Information);
                         }
                     }
+                    /* . Формировать отчет в Pdf по 
+всем продуктам (шапка: первые два столбца). Заголовки шапки: 
+идентификатор, название, единица измерений поставок и страна 
+производитель. Единицу измерений поставок и страну производитель
+группировать в «Информация». Л
+                       Id = (int)product.Id,
+                        name = product.name,
+                        Country = product.Country,
+                        UnitOfMeasurement = product.UnitOfMeasurement,
+                        SupplierOne = product.SupplierOne,
+                        SupplierTwo = product.SupplierTwo,
+                        SupplierThree = product.SupplierThree*/
                     bool result = pdfTableComponent.CreateDocumentWithObjects(fileName,
                        "Text", list, new List<string>
-                        { "Name", "FIO", "Position", "Age", "Weight" }, new List<int>
-                        { 0, 1, 3, 4 }, new Dictionary<int, string> { { 1, "10cm" }, { 3, "10cm" } });
+                        { "Id", "name","Информация","UnitOfMeasurement", "Country" }, new List<int>
+                        {3,4}, new Dictionary<int, string> { { 1, "5cm" }, { 3, "5cm" } });
 
                     if (result)
                     {
@@ -190,12 +201,31 @@ namespace AccountingOfProductsInTheStoreView.Forms
             if (((Control.ModifierKeys & Keys.Control) == Keys.Control)
         && e.KeyValue == 'C')
             {
+                List<ProductViewModel> list = productLogic.Read(null);
                 using (var dialog = new SaveFileDialog { Filter = "xls|*.xls" })
                 {
                     if (dialog.ShowDialog() == DialogResult.OK)
                     {
+                        List<string> serias = new List<string>();
+                        foreach(ProductViewModel product in list)
+                        {
+                            serias.Add(product.UnitOfMeasurement);
+                        }
                         // exel Semen
-                        //   gistagram.CreateFile(dialog.FileName, "Отчет по студентам", "Диаграмма по студентам", LegendLocation.Up, dictionary);
+                        excelChart.CreateExcel(new ExcelComponents.LineChartConfig
+                        {
+                            FilePath = dialog.FileName,
+                            Header = "Заголовок",
+                            ChartTitle = "Диаграмма",
+                            Position = ExcelComponents.LegendPosition.Botton,
+                            Values = new List<List<int>>
+                            {
+                            new List<int>{11, 51, 41, 53},
+                            new List<int>{23, 57, 22, 78},
+                            new List<int>{43, 75, 67, 55}
+                            },
+                            SeriesNames = new List<string> { "Line1", "Line2", "Line3" }
+                        });
                     }
                 }
                 MessageBox.Show("Отчет сформирован успешно", "Сообщение",

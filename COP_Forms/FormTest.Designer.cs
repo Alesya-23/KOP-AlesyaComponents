@@ -136,6 +136,7 @@ namespace ComponentsAutumn
             this.listBoxControlAlesa1.TabIndex = 0;
             this.listBoxControlAlesa1.ValueList = "";
             this.listBoxControlAlesa1.SpecEvent += new System.EventHandler(this.listBoxControl_SelectedChangedEvent);
+            this.listBoxControlAlesa1.Load += new System.EventHandler(this.listBoxControlAlesa1_Load);
             // 
             // labelNumb
             // 

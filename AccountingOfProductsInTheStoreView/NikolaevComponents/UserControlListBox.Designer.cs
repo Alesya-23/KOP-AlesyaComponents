@@ -38,7 +38,7 @@ namespace COP_labs
             this.ListBoxData.ItemHeight = 25;
             this.ListBoxData.Location = new System.Drawing.Point(0, 0);
             this.ListBoxData.Name = "ListBoxData";
-            this.ListBoxData.Size = new System.Drawing.Size(746, 329);
+            this.ListBoxData.Size = new System.Drawing.Size(1211, 304);
             this.ListBoxData.TabIndex = 0;
             // 
             // UserControlListBox
@@ -47,7 +47,7 @@ namespace COP_labs
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ListBoxData);
             this.Name = "UserControlListBox";
-            this.Size = new System.Drawing.Size(746, 333);
+            this.Size = new System.Drawing.Size(1211, 327);
             this.ResumeLayout(false);
 
         }

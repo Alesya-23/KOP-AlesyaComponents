@@ -10,6 +10,9 @@
     <Compile Update="Forms\FormUnitOfMeasurement.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NikolaevComponents\ExcelChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="NikolaevComponents\UserControlListBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

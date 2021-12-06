@@ -20,7 +20,8 @@ namespace AccountingOfProductsInTheStoreView.Forms
 
         public FormProduct()
         {
-            InitializeComponent();;
+            InitializeComponent();
+            TextBoxCountry.CurrentText = "dmvfkvdf";
         }
 
 
@@ -115,7 +116,7 @@ namespace AccountingOfProductsInTheStoreView.Forms
                     if (view != null)
                     {
                         textBoxName.Text = view.name;
-                        TextBoxCountry.Text = view.Country;
+                        TextBoxCountry.CurrentText = view.Country;
                         listBoxControlAlesa1.ValueList = view.UnitOfMeasurement;
                         textBoxSecondSupplier.Text = view.SupplierTwo;
                         textBoxFirstSupplier.Text = view.SupplierTwo;
