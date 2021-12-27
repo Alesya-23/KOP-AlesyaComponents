@@ -16,6 +16,10 @@ namespace AccountingOfProductInTheStoreView.Forms
     {
         private readonly ProductLogic productLogic = new ProductLogic();
 
+        private readonly Manager manager = new Manager();
+        private readonly SenderManager senderManager = new SenderManager();
+
+
         public FormMainProduct()
         {
             InitializeComponent();
@@ -304,6 +308,20 @@ namespace AccountingOfProductInTheStoreView.Forms
         private void линейнаяДиаграммаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateDiagramExel();
+        }
+
+
+        private void сообщениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FormAuth form = new FormAuth(senderManager);
+            form.ShowDialog();
+        }
+
+        private void конфигураторДокументовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChooseReport form = new FormChooseReport(manager);
+            form.ShowDialog();
         }
     }
 }

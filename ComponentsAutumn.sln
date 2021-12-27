@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnvisualComponentsAlesa", "UnvisualComponentsAlesa\UnvisualComponentsAlesa.csproj", "{5A84681F-3AFA-4AA0-B5C3-38D4DE3219C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COP_Forms", "COP_Forms\COP_Forms.csproj", "{942BC4A4-E3FF-4AD6-9F58-FC8063744315}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingOfProductInTheStoreView", "AccountingOfProductInTheStoreView\AccountingOfProductInTheStoreView.csproj", "{EE2735C9-F9C5-4638-BF87-29054064F610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginBuildWordReport", "PluginBuildWordReport\PluginBuildWordReport.csproj", "{C3E40697-015A-4240-B66E-CE30CDCD966F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPluginsConfigurations", "ClassLibraryPluginsConfigurations\ClassLibraryPluginsConfigurations.csproj", "{5AF80248-517F-42C4-94B6-6D3CD488506C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderMessagePluginVk", "SenderMessagePluginVk\SenderMessagePluginVk.csproj", "{E7B9CDBE-AC18-4BFC-B0F3-CA31DB0E494D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderMessageViber", "SenderMessageViber\SenderMessageViber.csproj", "{7041F560-1E90-42A3-BF8D-69C08C6A3CC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +25,26 @@ Global
 		{5A84681F-3AFA-4AA0-B5C3-38D4DE3219C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A84681F-3AFA-4AA0-B5C3-38D4DE3219C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A84681F-3AFA-4AA0-B5C3-38D4DE3219C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{942BC4A4-E3FF-4AD6-9F58-FC8063744315}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EE2735C9-F9C5-4638-BF87-29054064F610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EE2735C9-F9C5-4638-BF87-29054064F610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2735C9-F9C5-4638-BF87-29054064F610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE2735C9-F9C5-4638-BF87-29054064F610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E40697-015A-4240-B66E-CE30CDCD966F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E40697-015A-4240-B66E-CE30CDCD966F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E40697-015A-4240-B66E-CE30CDCD966F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E40697-015A-4240-B66E-CE30CDCD966F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF80248-517F-42C4-94B6-6D3CD488506C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF80248-517F-42C4-94B6-6D3CD488506C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF80248-517F-42C4-94B6-6D3CD488506C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF80248-517F-42C4-94B6-6D3CD488506C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B9CDBE-AC18-4BFC-B0F3-CA31DB0E494D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B9CDBE-AC18-4BFC-B0F3-CA31DB0E494D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B9CDBE-AC18-4BFC-B0F3-CA31DB0E494D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B9CDBE-AC18-4BFC-B0F3-CA31DB0E494D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7041F560-1E90-42A3-BF8D-69C08C6A3CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7041F560-1E90-42A3-BF8D-69C08C6A3CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7041F560-1E90-42A3-BF8D-69C08C6A3CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7041F560-1E90-42A3-BF8D-69C08C6A3CC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

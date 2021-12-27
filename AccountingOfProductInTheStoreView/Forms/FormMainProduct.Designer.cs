@@ -42,10 +42,12 @@ namespace AccountingOfProductInTheStoreView.Forms
             this.отчётВордToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.линейнаяДиаграммаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сообщениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.конфигураторДокументовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userControlListBox1 = new COP_labs.UserControlListBox();
             this.pdfTableComponent = new MyComponentsLibrary.PDFTableComponent(this.components);
             this.wordTableOne = new AccountingOfProductInTheStoreView.WordTableOne();
             this.excelChart = new ExcelComponents.ExcelChart(this.components);
-            this.userControlListBox1 = new COP_labs.UserControlListBox();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,9 +59,11 @@ namespace AccountingOfProductInTheStoreView.Forms
             this.справочникВеличинToolStripMenuItem,
             this.отчётВордToolStripMenuItem,
             this.отчетPDFToolStripMenuItem,
-            this.линейнаяДиаграммаToolStripMenuItem});
+            this.линейнаяДиаграммаToolStripMenuItem,
+            this.сообщениеToolStripMenuItem,
+            this.конфигураторДокументовToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            this.contextMenuStrip.Size = new System.Drawing.Size(260, 197);
+            this.contextMenuStrip.Size = new System.Drawing.Size(350, 228);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // студентыToolStripMenuItem
@@ -69,7 +73,7 @@ namespace AccountingOfProductInTheStoreView.Forms
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.студентыToolStripMenuItem.Name = "студентыToolStripMenuItem";
-            this.студентыToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.студентыToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
             this.студентыToolStripMenuItem.Text = "Продукты";
             // 
             // создатьToolStripMenuItem
@@ -96,30 +100,44 @@ namespace AccountingOfProductInTheStoreView.Forms
             // справочникВеличинToolStripMenuItem
             // 
             this.справочникВеличинToolStripMenuItem.Name = "справочникВеличинToolStripMenuItem";
-            this.справочникВеличинToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.справочникВеличинToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
             this.справочникВеличинToolStripMenuItem.Text = "Справочник величин";
             this.справочникВеличинToolStripMenuItem.Click += new System.EventHandler(this.справочникВеличинToolStripMenuItem_Click);
             // 
             // отчётВордToolStripMenuItem
             // 
             this.отчётВордToolStripMenuItem.Name = "отчётВордToolStripMenuItem";
-            this.отчётВордToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.отчётВордToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
             this.отчётВордToolStripMenuItem.Text = "Отчёт ворд  (Cntrl + S)";
             this.отчётВордToolStripMenuItem.Click += new System.EventHandler(this.отчётВордToolStripMenuItem_Click);
             // 
             // отчетPDFToolStripMenuItem
             // 
             this.отчетPDFToolStripMenuItem.Name = "отчетPDFToolStripMenuItem";
-            this.отчетPDFToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.отчетPDFToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
             this.отчетPDFToolStripMenuItem.Text = "Отчет PDF  (Cntrl + T)";
             this.отчетPDFToolStripMenuItem.Click += new System.EventHandler(this.отчетPDFToolStripMenuItem_Click);
             // 
             // линейнаяДиаграммаToolStripMenuItem
             // 
             this.линейнаяДиаграммаToolStripMenuItem.Name = "линейнаяДиаграммаToolStripMenuItem";
-            this.линейнаяДиаграммаToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.линейнаяДиаграммаToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
             this.линейнаяДиаграммаToolStripMenuItem.Text = "Линейная диаграмма  (Cntrl + C)";
             this.линейнаяДиаграммаToolStripMenuItem.Click += new System.EventHandler(this.линейнаяДиаграммаToolStripMenuItem_Click);
+            // 
+            // сообщениеToolStripMenuItem
+            // 
+            this.сообщениеToolStripMenuItem.Name = "сообщениеToolStripMenuItem";
+            this.сообщениеToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
+            this.сообщениеToolStripMenuItem.Text = "Сообщение";
+            this.сообщениеToolStripMenuItem.Click += new System.EventHandler(this.сообщениеToolStripMenuItem_Click);
+            // 
+            // конфигураторДокументовToolStripMenuItem
+            // 
+            this.конфигураторДокументовToolStripMenuItem.Name = "конфигураторДокументовToolStripMenuItem";
+            this.конфигураторДокументовToolStripMenuItem.Size = new System.Drawing.Size(349, 32);
+            this.конфигураторДокументовToolStripMenuItem.Text = "Конфигуратор документов";
+            this.конфигураторДокументовToolStripMenuItem.Click += new System.EventHandler(this.конфигураторДокументовToolStripMenuItem_Click);
             // 
             // userControlListBox1
             // 
@@ -165,5 +183,7 @@ namespace AccountingOfProductInTheStoreView.Forms
         private System.Windows.Forms.ToolStripMenuItem отчётВордToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem линейнаяДиаграммаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сообщениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem конфигураторДокументовToolStripMenuItem;
     }
 }

@@ -1,0 +1,14 @@
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\SenderMessageViber.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\SenderMessageViber.pdb
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\ClassLibraryPluginsConfigurations.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\Viber.Bot.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\TLSharp.Core.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\TeleSharp.TL.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\ClassLibraryPluginsConfigurations.pdb
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\obj\Debug\SenderMessageViber.csprojAssemblyReference.cache
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\obj\Debug\SenderMessageViber.csproj.CoreCompileInputs.cache
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\obj\Debug\SenderMessageViber.csproj.CopyComplete
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\obj\Debug\SenderMessageViber.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\SenderMessageViber\obj\Debug\SenderMessageViber.pdb

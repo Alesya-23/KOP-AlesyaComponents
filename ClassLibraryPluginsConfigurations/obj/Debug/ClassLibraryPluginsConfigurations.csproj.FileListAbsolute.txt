@@ -1,0 +1,9 @@
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\obj\Debug\ClassLibraryPluginsConfigurations.csproj.CoreCompileInputs.cache
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\bin\Debug\ClassLibraryPluginsConfigurations.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\bin\Debug\ClassLibraryPluginsConfigurations.pdb
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\bin\Debug\TeleSharp.TL.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\bin\Debug\TLSharp.Core.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\obj\Debug\ClassLibraryPluginsConfigurations.csproj.CopyComplete
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\obj\Debug\ClassLibraryPluginsConfigurations.dll
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\obj\Debug\ClassLibraryPluginsConfigurations.pdb
+C:\Users\aleca\source\repos\KOP\ComponentsAutumn\ClassLibraryPluginsConfigurations\obj\Debug\ClassLibraryPluginsConfigurations.csprojAssemblyReference.cache

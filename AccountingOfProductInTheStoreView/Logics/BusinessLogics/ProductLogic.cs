@@ -58,5 +58,10 @@ namespace AccountingOfProductInTheStoreView.Logic.BusinessLogics
             }
             courseStorage.Delete(model);
         }
+
+        internal List<ProductViewModel> Read()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
